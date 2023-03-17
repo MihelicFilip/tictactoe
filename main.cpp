@@ -11,14 +11,17 @@ int choice;
 int row,column;
 char turn = 'X';
 bool draw = false;;
+string player1="";
+string player2="";
+int player1Score = 0;
+int player2Score = 0;
 
 //Function to show the current status of the gaming board
 
 void display_board(){
 
     //Rander Game Board LAYOUT
-
-    cout<<"Igralec 1 [X] - Igralec - 2 [O]"<<endl;
+    cout << "-------------------------------------------" << endl;
     cout<<endl;
     cout<<"     |     |     "<<endl;
     cout<<"  "<<board[0][0]<<"  | "<<board[0][1]<<"   |  "<<board[0][2]<<endl;
@@ -35,10 +38,10 @@ void display_board(){
 
 void player_turn(){
     if(turn == 'X'){
-        cout<<"Navrsti je igralec 1: ";
+        cout<<"Navrsti je "<<player1<<" [X]: ";
     }
     else if(turn == 'O'){
-        cout<<"navrsti je igralec 2: ";
+        cout<<"navrsti je "<<player2<<" [O]: ";
     }
     //Taking input from user
     //updating the board according to choice and reassigning the turn Start
@@ -77,7 +80,6 @@ void player_turn(){
         player_turn();
     }
     /* Ends */
-    display_board();
 }
 
 //Function to get the game status e.g. GAME WON, GAME DRAW GAME IN CONTINUE MODE
@@ -141,6 +143,26 @@ void  nastavitve()
 
 
 }
+void resetBoard() {
+    char st = '1';
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            board[i][j] = st++;
+        }
+    }
+}
+void showPlayerScore() {
+    cout << "Rezultati" << endl;
+    cout << "----------------" << endl;
+    cout << player1 << "      " << player2 << endl;
+    cout << player1Score << "        " << player2Score << endl;
+    cout << endl;
+    cout << endl;
+    if (player1Score > player2Score) 
+        cout << "Trenutno vodi " << player1<<endl;   
+    else 
+        cout << "Trenutno vodi " << player2<<endl;
+}
 
 int main()
 {
@@ -152,22 +174,35 @@ int main()
         cin >> x;
 
         if(x=='1') {
+            //doloèanje kateri igralec bo zaèel/ime igralcev
+            if (player1 == "" && player2 == "") {
+                cout << "Ime igralca 1: " << endl;
+                cin >> player1;
+                cout << "Ime igralca 2: " << endl;
+                cin >> player2;
+            }
             while (gameover()) {
                 display_board();
-                player_turn();
                 gameover();
+                player_turn();
             }
             if (turn == 'X' && draw == false) {
-                cout << "igralec 1 je zmagal";
+                cout << "zmagal je: "<<player2<<endl;
+                    player2Score++;
+                resetBoard();
             } else if (turn == 'O' && draw == false) {
-                cout << "igralec 2 je zmagal";
+                cout << "zmagal je: "<<player1<<endl;
+                    player1Score++;
+                resetBoard();
+
             } else {
                 cout << "ni zmagovalca";
+                resetBoard();
             }
         }
         else if(x=='2')
         {
-
+            showPlayerScore();
         }
 
         else if(x=='3')
