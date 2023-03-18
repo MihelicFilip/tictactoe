@@ -1,3 +1,3 @@
-C:/Users/Klemen/Desktop/tic tac toe za RPS/cmake-build-debug/CMakeFiles/untitled.dir
-C:/Users/Klemen/Desktop/tic tac toe za RPS/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Klemen/Desktop/tic tac toe za RPS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/zekof/SOLA/FERI/2.letnik/2_2.semester/RazvojProgramskihSistemov/projektnoDelo/tictactoe/cmake-build-debug/CMakeFiles/untitled.dir
+C:/Users/zekof/SOLA/FERI/2.letnik/2_2.semester/RazvojProgramskihSistemov/projektnoDelo/tictactoe/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/zekof/SOLA/FERI/2.letnik/2_2.semester/RazvojProgramskihSistemov/projektnoDelo/tictactoe/cmake-build-debug/CMakeFiles/rebuild_cache.dir

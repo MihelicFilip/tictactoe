@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "untitled::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-untitled-Debug-b963f71e0037de5c5c86.json",
+					"jsonFile" : "target-untitled-Debug-4c9933b2adcead4bae5e.json",
 					"name" : "untitled",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Klemen/Desktop/tic tac toe za RPS/cmake-build-debug",
-		"source" : "C:/Users/Klemen/Desktop/tic tac toe za RPS"
+		"build" : "C:/Users/zekof/SOLA/FERI/2.letnik/2_2.semester/RazvojProgramskihSistemov/projektnoDelo/tictactoe/cmake-build-debug",
+		"source" : "C:/Users/zekof/SOLA/FERI/2.letnik/2_2.semester/RazvojProgramskihSistemov/projektnoDelo/tictactoe"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 4
 	}
 }
